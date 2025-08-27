@@ -1,9 +1,11 @@
 
 import streamlit as st, json
 from pathlib import Path
-from components.common import autosave, ensure_dirs
+from components.common import autosave, ensure_dirs, workspace_bar, quick_stepper
 from report.report_engine import build_pptx, build_preview
 st.set_page_config(page_title="Export", layout="wide")
+workspace_bar("08 — Export")
+quick_stepper(8)
 st.title("08 — Export")
 ensure_dirs()
 payload = {
